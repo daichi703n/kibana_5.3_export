@@ -1,21 +1,13 @@
 version: '2.1'
 services:
   kibana:
-#    image: docker.elastic.co/kibana/kibana:5.5.0
     build: kibana_5.3
     container_name: kibana_5.3_export
-    environment:
-      ELASTICSEARCH_URL: "http://192.168.1.81:9200"
-      ELASTICSEARCH_USERNAME: ""
-      ELASTICSEARCH_PASSWORD: ""
-      XPACK_MONITORING_ELASTICSEARCH_URL: "http://192.168.1.81:9200"
-      XPACK_SECURITY_ENABLED: "false"
     ports:
      - 5605:5601
     networks:
       - kibana_net
     volumes:
-#      - ./kibana_5.3/config/usr/:/usr/share/kibana/config/
       - ./kibana_5.3/config/etc/:/etc/kibana/
 networks:
   kibana_net:

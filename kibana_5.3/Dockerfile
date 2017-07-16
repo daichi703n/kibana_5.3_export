@@ -18,10 +18,4 @@ RUN tar -xzvf ./csv-export-patch.tar.gz
 RUN chown kibana:kibana -R ./src
 RUN rm -rf ./optimize/*
 
-#RUN echo 'nameserver 192.168.1.77' >> /etc/resolv.conf
-
-#USER kibana
-#WORKDIR /usr/share/kibana
-
 CMD /usr/share/kibana/bin/kibana
-#CMD /usr/local/bin/kibana
