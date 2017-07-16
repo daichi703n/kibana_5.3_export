@@ -1,0 +1,5 @@
+server.port: 5601
+server.host: "0.0.0.0"
+server.name: "kibana.designet.local"
+elasticsearch.url: "http://192.168.1.81:9200"
+logging.dest: /etc/kibana/kibana.log
